@@ -6,7 +6,29 @@
     "name": "Latex Fabrics — UI/UX V1",
     "team": "Habeeb Adewole's team (team::1276203698674935225)"
   },
-  "phase": "phase1-COMPLETE-all-chunks",
+  "phase": "phase1-COMPLETE-royal-velvet-revision",
+  "brandPattern": {
+    "name": "Pattern/RoyalLace",
+    "spec": "Lace-rosette + adire diamond lattice. Per 80px tile (96px desktop, 100px cover): diamond path M(c,4)L(t-4,c)L(c,t-4)L(4,c)Z + center circle r=0.15t + 4 orbit dots r=0.06t at 0.22t offsets. Stroke Royal Gold #C6A032 width 1, no fill. Overlaid ABSOLUTE at index 0, locked, opacity 0.13 heroes / 0.11 bands / 0.14 cover.",
+    "placements": {
+      "cover": "65:2", "mobileHero": "65:1158", "mobileWhatsAppBand": "65:1369",
+      "desktopHero": "65:2083", "desktopWhatsAppBand": "65:2574",
+      "aboutHero": "66:104", "aboutCTAStrip": "66:210"
+    },
+    "phase2Note": "Implement in code as a tiled inline-SVG background-image (data URI) on wine sections, not a raster."
+  },
+  "paletteRevision": {
+    "date": "2026-07-20",
+    "name": "Royal Velvet",
+    "changes": {
+      "gold/500": "#C9A84C -> #C6A032", "gold/600": "#B8973F -> #AD8B26",
+      "mahogany/900 (renamed wine/900)": "#3D2B1F -> #451822",
+      "ivory/100": "#F5F0E8 -> #FAF3EF", "brown/400 (renamed rose/400)": "#8C7B6B -> #9C7F85",
+      "burgundy/700 (new)": "#7B2D3B = VariableID:59:2", "burgundy/800 (new)": "#632331 = VariableID:59:3",
+      "bg/accent": "re-aliased gold/500 -> burgundy/700", "bg/accent-hover": "re-aliased -> burgundy/800"
+    },
+    "alsoRetinted": ["modal dim overlays 35:2/35:580/44:19", "Shadow/sm+md+lg effect styles", "Foundations swatch labels + 2 new burgundy cards"]
+  },
   "chunkE": {
     "pages": { "Desktop1280": "47:2", "ScreenStates": "47:3" },
     "Home desktop": "48:2", "Catalog desktop": "51:160",

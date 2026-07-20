@@ -8,6 +8,16 @@ Woven in Heritage. Draped in Luxury.
 
 Version 1.0   ·   2025
 
+> **PALETTE REVISION v1.1 (2026-07-20) — supersedes all color values below.** The brand moved to
+> the "Royal Velvet" palette: Royal Burgundy `#7B2D3B` (primary actions; hover `#632331`), Royal
+> Gold `#C6A032` (prices/logo/accents; hover `#AD8B26`), Deep Wine `#451822` (dark surfaces,
+> replaces Deep Mahogany `#3D2B1F`), Blush Ivory `#FAF3EF` (backgrounds, replaces Ivory Linen
+> `#F5F0E8`), Rose Taupe `#9C7F85` (secondary text, replaces Muted Brown `#8C7B6B`). Charcoal,
+> WhatsApp Green, and the error/success/amber functional colors are unchanged. Wherever this
+> document says Heritage Gold `#C9A84C` or Deep Mahogany, read the corresponding new value. All
+> usage rules (never pure white, WhatsApp Green only on WhatsApp buttons, approved-combination
+> logic) still apply.
+
 # Table of Contents
 
 01  —  Brand Story & Foundation

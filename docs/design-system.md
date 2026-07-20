@@ -24,7 +24,7 @@ This design system establishes the foundational tokens, component patterns, and 
 
 Add the following to your tailwind.config.js under theme.extend.colors:
 
-| tailwind.config.js — colors brand: { gold:      '#C9A84C',   // Heritage Gold — primary accent mahogany:  '#3D2B1F',   // Deep Mahogany — dark surfaces ivory:     '#F5F0E8',   // Ivory Linen — light backgrounds charcoal:  '#1A1A1A',   // Charcoal Black — body text whatsapp:  '#25D366',   // WhatsApp Green — order CTAs only muted:     '#8C7B6B',   // Muted Brown — secondary text, captions } |
+| tailwind.config.js — colors brand ("Royal Velvet" palette, revised 2026-07-20): { burgundy: '#7B2D3B',   // Royal Burgundy — primary CTAs, active pills, badges burgundyDark: '#632331', // Burgundy hover gold:      '#C6A032',   // Royal Gold — prices, logo, accents goldDark:  '#AD8B26',   // Gold hover wine:      '#451822',   // Deep Wine — navbar/footer/dark surfaces ivory:     '#FAF3EF',   // Blush Ivory — light backgrounds (never pure white) charcoal:  '#1A1A1A',   // Charcoal Black — body text whatsapp:  '#25D366',   // WhatsApp Green — order CTAs only muted:     '#9C7F85',   // Rose Taupe — secondary text, captions } — supersedes the original gold/mahogany values throughout this doc |
 |---|
 
 ## 2.2 Spacing Scale

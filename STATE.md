@@ -17,6 +17,16 @@ design system, wireframe spec, brand guidelines) — those documents are the sou
 (none — Phase 1 shipped; run DISCUSS for Phase 2 next session)
 
 ## Key Decisions Made
+- PALETTE REVISION (2026-07-20, post-Phase-1 review): owner found Heritage Gold palette dull →
+  adopted "Royal Velvet": Burgundy #7B2D3B primary (hover #632331), Royal Gold #C6A032 accents,
+  Deep Wine #451822 dark surfaces, Blush Ivory #FAF3EF bg, Rose Taupe #9C7F85 secondary text.
+  Applied via Figma variable primitives (whole file recolored automatically); docs updated
+  (CLAUDE.md, design-system.md, brand-guidelines.md v1.1 note). Bonus: white-on-burgundy CTAs
+  now pass contrast (~9:1) where white-on-gold failed (~2.1:1).
+- BRAND PATTERN (2026-07-20): added "Pattern/RoyalLace" — gold lace-rosette + adire diamond
+  lattice at 11–14% opacity over all wine sections (cover, Home heroes mobile+desktop, WhatsApp
+  bands, About hero + CTA strip). Spec + node IDs in .plans/figma-build-state.json. Phase 2:
+  implement as tiled inline-SVG background-image on wine sections.
 - UI/UX first — no code until designs are done (decided 2026-07-20)
 - Design medium: natively in Figma via the claude.ai Figma connector (authenticated, working)
 - Figma team: "Habeeb Adewole's team" (team::1276203698674935225)

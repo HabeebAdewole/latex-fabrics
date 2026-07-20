@@ -10,9 +10,10 @@ Premium fabric e-commerce PWA for Latex Fabrics (Mrs. Adewole Latifat's 20-year 
 - [docs/wireframe-spec.md](docs/wireframe-spec.md) — all 18 screens (SCR-001…SCR-018), components, states, breakpoints
 - [docs/brand-guidelines.md](docs/brand-guidelines.md) — colors, typography, voice, WhatsApp message format
 
-## Non-negotiable brand tokens
+## Non-negotiable brand tokens ("Royal Velvet" palette, revised 2026-07-20)
 
-- Heritage Gold `#C9A84C` (primary/CTAs/prices) · Deep Mahogany `#3D2B1F` (navbar/footer/dark surfaces) · Ivory Linen `#F5F0E8` (backgrounds — **never pure white**) · Charcoal `#1A1A1A` (body text — never `#000`) · Muted Brown `#8C7B6B` (secondary text) · WhatsApp Green `#25D366` (**WhatsApp order buttons only**)
+- Royal Burgundy `#7B2D3B` (primary CTAs/active pills/badges; hover `#632331`) · Royal Gold `#C6A032` (prices/logo/accents; hover `#AD8B26`) · Deep Wine `#451822` (navbar/footer/dark surfaces) · Blush Ivory `#FAF3EF` (backgrounds — **never pure white**) · Charcoal `#1A1A1A` (body text — never `#000`) · Rose Taupe `#9C7F85` (secondary text) · WhatsApp Green `#25D366` (**WhatsApp order buttons only**)
+- (Supersedes the original Heritage Gold `#C9A84C` / Deep Mahogany `#3D2B1F` / Ivory Linen `#F5F0E8` palette wherever older docs mention it.)
 - Fonts: Playfair Display (hero/display only), Georgia (H1/H2), Lato (body/UI/buttons)
 - Radius: 8px buttons, 12px cards · Touch targets ≥ 44px · Prices always `₦8,500` format in gold bold
 - Categories: All · Lace · Swiss Voile · Cord Lace · Sequins · Dry Lace · Luxury Fabrics
