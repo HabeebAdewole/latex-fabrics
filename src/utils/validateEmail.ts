@@ -1,1 +1,0 @@
-// validateEmail module

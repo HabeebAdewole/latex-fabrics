@@ -1,55 +1,46 @@
-import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import ProtectedRoute from "./components/common/ProtectedRoute";
-import AdminRoute from "./components/common/AdminRoute";
-
 import Home from "./pages/Home";
-import Products from "./pages/Products";
-import ProductDetail from "./pages/ProductDetail";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
 
-// Protected 
-import Profile from "./pages/Profile";
-import Orders from "./pages/Orders";
-import Favorites from "./pages/Favorites";
+// Home loads eagerly for fastest first paint; everything else is code-split.
+const Shop = lazy(() => import("./pages/Shop"));
+const ProductDetail = lazy(() => import("./pages/ProductDetail"));
+const Search = lazy(() => import("./pages/Search"));
+const Cart = lazy(() => import("./pages/Cart"));
+const Wishlist = lazy(() => import("./pages/Wishlist"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Offline = lazy(() => import("./pages/Offline"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Admin
-import Dashboard from "./pages/admin/Dashboard";
-import ProductManagement from "./pages/admin/ProductManagement";
-import OrderManagement from "./pages/admin/OrderManagement";
-import Analytics from "./pages/admin/Analytics";
-
-function App() {
+function PageFallback() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        {/* Public Routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/cart" element={<Cart />} />
-        
-        {/* Auth Routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        
-        {/* User Protected Routes */}
-        <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
-        <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-        <Route path="/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
-        <Route path="/favorites" element={<ProtectedRoute><Favorites /></ProtectedRoute>} />
-
-        {/* Admin Routes */}
-        <Route path="/admin" element={<AdminRoute><Dashboard /></AdminRoute>} />
-        <Route path="/admin/products" element={<AdminRoute><ProductManagement /></AdminRoute>} />
-        <Route path="/admin/orders" element={<AdminRoute><OrderManagement /></AdminRoute>} />
-        <Route path="/admin/analytics" element={<AdminRoute><Analytics /></AdminRoute>} />
-      </Route>
-    </Routes>
+    <div className="flex min-h-[40vh] items-center justify-center">
+      <p className="font-display text-xl font-bold text-brand-gold">
+        LATEX FABRICS
+      </p>
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Suspense fallback={<PageFallback />}>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:productId" element={<ProductDetail />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/offline" element={<Offline />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Suspense>
+  );
+}

@@ -10,15 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.90.21",
-    "axios": "^1.13.6",
+    "@fontsource/lato": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.13.1",
     "tailwind-merge": "^3.5.0",
-    "vite-plugin-pwa": "^1.1.0"
+    "vite-plugin-pwa": "^1.1.0",
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

@@ -14,7 +14,32 @@ design system, wireframe spec, brand guidelines) — those documents are the sou
 - [ ] Phase 4: Testing, PWA polish, deployment
 
 ## Current Phase Goal
-(none — Phase 1 shipped; run DISCUSS for Phase 2 next session)
+Phase 2 — Frontend development: rebuild src/ to match the shipped Figma designs
+(https://www.figma.com/design/cPOo1oa69b6p43JoHqzgFh). All 12 customer screens, Royal Velvet
+palette, Royal Lace pattern, working cart/wishlist (localStorage), WhatsApp checkout modal,
+installable offline-capable PWA. Budgets: ≤200KB gzipped core, FCP <2s Fast 3G, WCAG AA,
+touch targets ≥44px. Plan: .plans/phase-2-plan.md
+
+## Phase 2 Decisions (DISCUSS, 2026-07-20)
+- Catalog = static JSON in repo (src/data/products.json), precached by service worker for
+  offline. No backend in V1; API can slot behind the same interface in V2.
+- Existing src/ = clean rebuild. Keep Vite/TS/Tailwind/ESLint config + src/assets images;
+  delete green-palette pages, sidebar layout, auth/orders/profile/admin routes and contexts.
+- Deps: ADD zustand (cart+wishlist, persist middleware), @fontsource/playfair-display,
+  @fontsource/lato. REMOVE @tanstack/react-query, axios (nothing to fetch).
+- Fonts self-hosted via @fontsource (Playfair 700, Lato 400/700); Georgia from system stack.
+- WhatsApp number = placeholder constant in src/config.ts until Mrs. Adewole's real number
+  is provided (pending input, not a blocker).
+- PWA manifest: theme #451822 (Deep Wine), LF monogram icons to generate.
+- REPOS (2026-07-20): frontend = this repo (github.com/HabeebAdewole/latex-fabrics, local dev
+  ahead of origin/dev by the Phase-1 commits — push when ready). Backend =
+  github.com/HabeebAdewole/latex-fabrics-backend, cloned to Desktop/Projects/latex-fabrics-backend.
+  Backend status: Express 5 + Prisma 6 + Postgres; only auth utilities exist, app.ts wires NO
+  routes yet; Prisma schema models accounts/orders/payments (V2+ scope per PRD). Decision:
+  backend is the Phase 3 track (catalog API). products.json in the frontend mirrors the Prisma
+  Product model (id, name, description, category, pricePerYard, stockQuantity, images, colors)
+  so the Phase 3 data-layer swap is trivial. Known backend nit: schema misspells
+  passwordRestToken → fix in Phase 3.
 
 ## Key Decisions Made
 - PALETTE REVISION (2026-07-20, post-Phase-1 review): owner found Heritage Gold palette dull →
@@ -38,6 +63,14 @@ design system, wireframe spec, brand guidelines) — those documents are the sou
   customer auth) — will be reworked in Phase 2, designs take authority
 
 ## Completed Tasks This Phase
+- PHASE 2 Chunk A (foundation) DONE on branch phase-2/chunk-a-foundation:
+  deps swapped (zustand + @fontsource in; react-query + axios out) · Royal Velvet tailwind
+  tokens · Royal Lace CSS pattern utility (inline SVG) · old src/ torn down · config.ts
+  (WhatsApp placeholder, categories, locations) · products.json (12 SKUs mirroring Prisma
+  Product model) · lib (format/catalog/whatsapp per brand §9.3) · zustand cart+wishlist stores
+  (persist) · router with lazy routes · Navbar/BottomNav/Footer shell · PWA manifest Royal
+  Velvet. Build passes: 79.7KB gz core (budget 200KB). Verified in browser: clean DOM, no
+  console errors.
 - Docs converted and added to repo context (CLAUDE.md + docs/)
 - STATE.md created; .plans/phase-1-plan.md created
 - Figma file created: https://www.figma.com/design/cPOo1oa69b6p43JoHqzgFh (Latex Fabrics — UI/UX V1)

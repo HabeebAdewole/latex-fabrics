@@ -1,0 +1,134 @@
+[
+  {
+    "id": "royal-swiss-voile",
+    "name": "Royal Swiss Voile",
+    "description": "Crisp, lightweight Swiss voile with fine embroidery. Drapes beautifully and stays sharp through a full owambe — perfect for that statement gele moment.",
+    "category": "Swiss Voile",
+    "pricePerYard": 8500,
+    "stockQuantity": 85,
+    "images": ["/images/products/swiss-voile.jpg"],
+    "colors": ["#F5EFE6", "#C6A032"],
+    "occasions": ["Wedding", "Owambe", "Church"]
+  },
+  {
+    "id": "blush-swiss-voile",
+    "name": "Blush Swiss Voile",
+    "description": "Soft rose-toned voile with a whisper-light drape. Ideal for aso-ebi coordination when the party calls for something gentle and radiant.",
+    "category": "Swiss Voile",
+    "pricePerYard": 9000,
+    "stockQuantity": 42,
+    "images": ["/images/products/silk.jpg"],
+    "colors": ["#E8C4B0", "#F5EFE6"],
+    "occasions": ["Owambe", "Traditional Ceremony"]
+  },
+  {
+    "id": "champagne-cord-lace",
+    "name": "Champagne Cord Lace",
+    "description": "Structured cord lace with a rich champagne sheen — the same quality Lagos's top designers rely on for bridal and celebration wear.",
+    "category": "Cord Lace",
+    "pricePerYard": 12000,
+    "stockQuantity": 34,
+    "images": ["/images/products/lace.jpg"],
+    "colors": ["#D9C58F", "#FFFFFF"],
+    "occasions": ["Wedding", "Formal Event"]
+  },
+  {
+    "id": "emerald-cord-lace",
+    "name": "Emerald Cord Lace",
+    "description": "Deep emerald cordwork with a firm, sculptural hold. Commands the room at traditional ceremonies and evening events.",
+    "category": "Cord Lace",
+    "pricePerYard": 11200,
+    "stockQuantity": 18,
+    "images": ["/images/products/brocade.jpg"],
+    "colors": ["#1E8156", "#C6A032"],
+    "occasions": ["Traditional Ceremony", "Formal Event"]
+  },
+  {
+    "id": "midnight-sequins",
+    "name": "Midnight Sequins",
+    "description": "Densely-set sequins on a midnight base that catches every light in the hall. For the guest who intends to be photographed.",
+    "category": "Sequins",
+    "pricePerYard": 15500,
+    "stockQuantity": 25,
+    "images": ["/images/products/ankara.jpg"],
+    "colors": ["#14244A", "#1A1A1A"],
+    "occasions": ["Owambe", "Formal Event"]
+  },
+  {
+    "id": "gold-cordnet-sequins",
+    "name": "Gold Cordnet Sequins",
+    "description": "Cordnet base layered with gold sequins — luxurious weight, serious shimmer. A favourite for mothers of the bride.",
+    "category": "Sequins",
+    "pricePerYard": 17000,
+    "stockQuantity": 12,
+    "images": ["/images/products/kente.jpg"],
+    "colors": ["#C6A032", "#B8860B"],
+    "occasions": ["Wedding", "Owambe"]
+  },
+  {
+    "id": "pearl-tissue-lace",
+    "name": "Pearl Tissue Lace",
+    "description": "Feather-light tissue lace scattered with pearl accents. Breathes in Lagos heat and photographs like a dream.",
+    "category": "Lace",
+    "pricePerYard": 13500,
+    "stockQuantity": 40,
+    "images": ["/images/products/swiss-voile.jpg"],
+    "colors": ["#F5EFE6", "#E8E0D2"],
+    "occasions": ["Wedding", "Church"]
+  },
+  {
+    "id": "french-rosette-lace",
+    "name": "French Rosette Lace",
+    "description": "Floral rosette lace with a soft scalloped edge — a timeless choice for church occasions and family celebrations.",
+    "category": "Lace",
+    "pricePerYard": 9800,
+    "stockQuantity": 58,
+    "images": ["/images/products/lace.jpg"],
+    "colors": ["#6B1C2B", "#D33A3A"],
+    "occasions": ["Church", "Everyday"]
+  },
+  {
+    "id": "ivory-dry-lace",
+    "name": "Ivory Dry Lace",
+    "description": "Classic dry lace with a clean matte finish and firm handfeel. Tailors love it for structured styles that hold their shape.",
+    "category": "Dry Lace",
+    "pricePerYard": 6800,
+    "stockQuantity": 120,
+    "images": ["/images/products/adire.jpg"],
+    "colors": ["#F5EFE6"],
+    "occasions": ["Everyday", "Church"]
+  },
+  {
+    "id": "onyx-dry-lace",
+    "name": "Onyx Dry Lace",
+    "description": "Jet-black dry lace with a subtle geometric weave. Sharp, versatile, and endlessly re-wearable.",
+    "category": "Dry Lace",
+    "pricePerYard": 7200,
+    "stockQuantity": 0,
+    "images": ["/images/products/aso-oke.jpg"],
+    "colors": ["#1A1A1A"],
+    "occasions": ["Formal Event", "Everyday"]
+  },
+  {
+    "id": "regal-brocade",
+    "name": "Regal Brocade",
+    "description": "Heavy jacquard brocade woven with a tonal damask motif. Structured, stately, and made for agbada that means business.",
+    "category": "Luxury Fabrics",
+    "pricePerYard": 10500,
+    "stockQuantity": 30,
+    "images": ["/images/products/brocade.jpg"],
+    "colors": ["#14244A", "#B5A363"],
+    "occasions": ["Traditional Ceremony", "Formal Event"]
+  },
+  {
+    "id": "heritage-aso-oke",
+    "name": "Heritage Aso-Oke",
+    "description": "Hand-woven aso-oke in deep celebration tones, made by master weavers. Sold as a full bundle for complete family sets.",
+    "category": "Luxury Fabrics",
+    "pricePerYard": 15000,
+    "stockQuantity": 15,
+    "images": ["/images/products/aso-oke.jpg"],
+    "colors": ["#822433", "#3A1921"],
+    "occasions": ["Wedding", "Traditional Ceremony"]
+  }
+]
