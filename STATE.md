@@ -7,15 +7,14 @@ design system, wireframe spec, brand guidelines) — those documents are the sou
 
 ## Phase Progress
 - [x] Phase 0: Brand identity, PRD, FRD, design system, wireframe spec finalized (docs in /docs)
-- [ ] Phase 1: UI/UX design — ALL 12 customer screens, natively in Figma  ← YOU ARE HERE
-- [ ] Phase 2: Frontend development (rebuild src/ to match approved designs)
+- [x] Phase 1: UI/UX design — ALL 12 customer screens, natively in Figma (SHIPPED 2026-07-20,
+      commit 44775ce)
+- [ ] Phase 2: Frontend development (rebuild src/ to match approved designs)  ← NEXT
 - [ ] Phase 3: Backend integration (catalog API, WhatsApp flow)
 - [ ] Phase 4: Testing, PWA polish, deployment
 
 ## Current Phase Goal
-Design the complete UI/UX for the 12 customer-facing screens (SCR-001 → SCR-012) natively in Figma,
-via the Figma MCP connector: variables/tokens first, then component library, then screen assembly.
-No application code until this phase ships.
+(none — Phase 1 shipped; run DISCUSS for Phase 2 next session)
 
 ## Key Decisions Made
 - UI/UX first — no code until designs are done (decided 2026-07-20)
@@ -58,7 +57,7 @@ No application code until this phase ships.
   skeleton grid · SCR-005-EMPTY cart state · Final QA audit passed: 25 pages, 42 variables,
   10 text styles, 3 effect styles, 21 screens/states verified, 0 missing.
 
-## PHASE 1 STATUS: EXECUTE + VERIFY COMPLETE — awaiting owner review, then SHIP (git commit)
+## PHASE 1 STATUS: SHIPPED — commit 44775ce on dev, 2026-07-20
 
 ## Issues Found & Fixed
 - Georgia is not available in Figma → using Lora as the on-canvas stand-in for H1/H2/Tagline
@@ -77,8 +76,11 @@ No application code until this phase ships.
 - (none — Figma connector is authenticated)
 
 ## Next Phase Preview
-Phase 2: Rebuild src/ against the approved Figma designs — correct tokens in tailwind.config,
-top navbar + bottom nav layout, remove auth/admin scope creep, Zustand cart, WhatsApp checkout.
+Phase 2: Rebuild src/ against the shipped Figma designs — correct tokens in tailwind.config
+(Heritage Gold palette, replace green), top navbar + bottom nav layout (remove sidebar),
+strip customer auth/admin scope creep, Zustand cart, WhatsApp checkout flow, real Georgia
+font stack. Design source: https://www.figma.com/design/cPOo1oa69b6p43JoHqzgFh + docs/.
+Start with DISCUSS: decide catalog data source (static JSON vs API) before any code.
 
 ## Last Session Date
 2026-07-20
