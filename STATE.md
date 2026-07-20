@@ -8,7 +8,7 @@ design system, wireframe spec, brand guidelines) — those documents are the sou
 ## Phase Progress
 - [x] Phase 0: Brand identity, PRD, FRD, design system, wireframe spec finalized (docs in /docs)
 - [x] Phase 1: UI/UX design — ALL 12 customer screens, natively in Figma (SHIPPED 2026-07-20,
-      commit 44775ce)
+      commit 6d61782)
 - [ ] Phase 2: Frontend development (rebuild src/ to match approved designs)  ← NEXT
 - [ ] Phase 3: Backend integration (catalog API, WhatsApp flow)
 - [ ] Phase 4: Testing, PWA polish, deployment
@@ -100,7 +100,7 @@ touch targets ≥44px. Plan: .plans/phase-2-plan.md
   skeleton grid · SCR-005-EMPTY cart state · Final QA audit passed: 25 pages, 42 variables,
   10 text styles, 3 effect styles, 21 screens/states verified, 0 missing.
 
-## PHASE 1 STATUS: SHIPPED — commit 44775ce on dev, 2026-07-20
+## PHASE 1 STATUS: SHIPPED — commit 6d61782 on dev, 2026-07-20
 
 ## Issues Found & Fixed
 - Georgia is not available in Figma → using Lora as the on-canvas stand-in for H1/H2/Tagline
