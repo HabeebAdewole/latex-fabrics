@@ -1,0 +1,116 @@
+{
+  "runId": "latex-uiux-2026-07-20",
+  "figmaFile": {
+    "key": "cPOo1oa69b6p43JoHqzgFh",
+    "url": "https://www.figma.com/design/cPOo1oa69b6p43JoHqzgFh",
+    "name": "Latex Fabrics — UI/UX V1",
+    "team": "Habeeb Adewole's team (team::1276203698674935225)"
+  },
+  "phase": "phase1-COMPLETE-all-chunks",
+  "chunkE": {
+    "pages": { "Desktop1280": "47:2", "ScreenStates": "47:3" },
+    "Home desktop": "48:2", "Catalog desktop": "51:160",
+    "Detail desktop": "53:353", "Cart desktop": "55:498",
+    "SCR-002-LOADING": "56:2", "SCR-005-EMPTY": "56:119"
+  },
+  "finalQA": "2026-07-20: 25 pages, 42 variables (4 collections), 10 text styles, 3 effect styles, 21 screens/states verified present, 0 missing",
+  "chunkD": {
+    "pages": { "Search": "38:2", "Wishlist": "38:3", "About": "38:4", "Contact": "38:5", "System": "38:6" },
+    "LocationCard (Name/Address props)": "39:8",
+    "SCR-004 Search results": "40:2", "SCR-004-EMPTY": "40:140",
+    "SCR-007 Wishlist": "41:2", "SCR-007-EMPTY": "41:158",
+    "SCR-008 About": "42:2",
+    "SCR-009 Contact": "43:2",
+    "SCR-010 Offline": "44:2", "SCR-011 InstallPrompt": "44:19", "SCR-012 404": "44:29"
+  },
+  "screens": {
+    "pages": { "TilesRows": "18:2", "ScreensSeparator": "18:3", "Home": "18:4", "Catalog": "18:5", "ProductDetail": "18:6", "Cart": "18:7", "Checkout": "18:8" },
+    "CategoryTile (Name prop)": "20:2",
+    "CartItem (Name/PricePerYard/Qty/LineTotal props)": "20:5",
+    "SCR-001 Home wrapper": "22:2",
+    "SCR-002 Catalog wrapper": "27:2",
+    "SCR-003 ProductDetail wrapper": "31:2",
+    "SCR-005 Cart wrapper": "33:2",
+    "SCR-006 Checkout overlay": "35:2",
+    "SCR-006 Checkout sheet": "35:3",
+    "SCR-006b Confirmation": "35:580"
+  },
+  "completedSteps": ["phase0-discovery", "P1.a-collections", "P1.b-primitives", "P1.c-semantics", "P1.d-scopes", "P1.e-code-syntax", "P1.f-text-and-effect-styles", "P2.a-pages", "P2.b-cover", "P2.c-color-swatches", "P2.d-type-specimens", "P3.a-component-pages", "P3.b-icons", "P3.c-buttons", "P3.d-badges-pills", "P3.e-inputs", "P3.f-product-card", "P3.g-navigation", "P3.h-feedback", "P3.i-footer", "P3.j-validation"],
+  "pages": {
+    "Cover": "0:1", "Foundations": "4:2", "ComponentsSeparator": "7:2",
+    "Icons": "7:3", "Buttons": "7:4", "BadgesPills": "7:5", "Inputs": "7:6",
+    "ProductCard": "7:7", "Navigation": "7:8", "Feedback": "7:9", "Footer": "7:10"
+  },
+  "docNodes": { "coverFrame": "4:3", "colorSection": "4:8", "typeSection": "4:71" },
+  "components": {
+    "icons": {
+      "Icon/Search": "8:5", "Icon/Heart": "8:8", "Icon/Cart": "8:13", "Icon/Home": "8:17",
+      "Icon/Grid": "8:23", "Icon/Menu": "8:28", "Icon/X": "8:32", "Icon/Plus": "8:36",
+      "Icon/Minus": "8:39", "Icon/Trash": "8:44", "Icon/Filter": "8:47", "Icon/ChevronDown": "8:50",
+      "Icon/Check": "8:53", "Icon/WifiOff": "8:62", "Icon/MapPin": "8:66", "Icon/Share": "8:73",
+      "Icon/WhatsApp": "8:76"
+    },
+    "Button (set, 15 variants, Label prop Label#9:0)": "9:38",
+    "Badge/FabricType (Type prop)": "9:39",
+    "Badge/CartCount (Count prop)": "9:41",
+    "Badge/Stock (set: In/Low/Out, Label prop Label#9:18)": "9:52",
+    "Pill/Category (set: Active/Inactive, Label prop)": "9:57",
+    "Input (set: Default/Focus/Error, Label+Placeholder props)": "9:71",
+    "SearchBar (set: Default/Focus)": "10:15",
+    "QuantitySelector (set: Default/AtMin, Value prop)": "10:36",
+    "Radio (set: Yes/No, Label prop)": "10:44",
+    "ProductCard (set: Default/Hover/OutOfStock/Skeleton, Name+Price props)": "11:74",
+    "Navbar/Desktop": "11:83",
+    "Navbar/Mobile": "11:105",
+    "BottomNav/Mobile": "11:122",
+    "Toast (set: Success/Info, Message prop)": "11:160",
+    "OfflineBanner": "11:161",
+    "Footer/Desktop": "11:171"
+  },
+  "knownFixes": [
+    "Hover tints: apply opacity AFTER setBoundVariableForPaint (it discards paint opacity)",
+    "Input variants: never resize() after setting AUTO sizing — resets to FIXED; use layoutSizingVertical HUG after appendChild",
+    "Instance overrides: instances are named after their component set — find by mainComponent parent name, and patch TEXT props by their full key (Label#id)"
+  ],
+  "fontDecision": "Georgia unavailable in Figma — Lora used as canvas stand-in for H1/H2/Tagline; coded app keeps Georgia system stack",
+  "collections": {
+    "Primitives": { "id": "VariableCollectionId:2:2", "modeId": "2:0" },
+    "Color": { "id": "VariableCollectionId:2:3", "modeId": "2:1" },
+    "Spacing": { "id": "VariableCollectionId:2:4", "modeId": "2:2" },
+    "Radius": { "id": "VariableCollectionId:2:5", "modeId": "2:3" }
+  },
+  "variables": {
+    "gold/500": "VariableID:2:6", "gold/600": "VariableID:2:7", "mahogany/900": "VariableID:2:8",
+    "ivory/100": "VariableID:2:9", "charcoal/900": "VariableID:2:10", "brown/400": "VariableID:2:11",
+    "whatsapp/500": "VariableID:2:12", "whatsapp/600": "VariableID:2:13", "red/600": "VariableID:2:14",
+    "green/600": "VariableID:2:15", "amber/500": "VariableID:2:16", "white": "VariableID:2:17",
+    "bg/page": "VariableID:2:18", "bg/surface": "VariableID:2:19", "bg/dark": "VariableID:2:20",
+    "bg/accent": "VariableID:2:21", "bg/accent-hover": "VariableID:2:22", "bg/whatsapp": "VariableID:2:23",
+    "bg/whatsapp-hover": "VariableID:2:24", "text/primary": "VariableID:2:25", "text/secondary": "VariableID:2:26",
+    "text/inverse": "VariableID:2:27", "text/on-accent": "VariableID:2:28", "text/accent": "VariableID:2:29",
+    "border/default": "VariableID:2:30", "border/muted": "VariableID:2:31", "border/accent": "VariableID:2:32",
+    "feedback/error": "VariableID:2:33", "feedback/success": "VariableID:2:34", "feedback/warning": "VariableID:2:35",
+    "spacing/xs": "VariableID:2:36", "spacing/sm": "VariableID:2:37", "spacing/md": "VariableID:2:38",
+    "spacing/lg": "VariableID:2:39", "spacing/xl": "VariableID:2:40", "spacing/2xl": "VariableID:2:41",
+    "spacing/3xl": "VariableID:2:42", "radius/sm": "VariableID:2:43", "radius/md": "VariableID:2:44",
+    "radius/lg": "VariableID:2:45", "radius/xl": "VariableID:2:46", "radius/full": "VariableID:2:47"
+  },
+  "textStyles": {
+    "Display/Hero": "S:de430e81f33d6a413fca4aa52b82b03e5206fb52,",
+    "Heading/H1": "S:28efbe71002aab64f8aae7c371ccfb594a7b1946,",
+    "Heading/H2": "S:71d3febb5f9bc79c63198deae0fc364e4dca2994,",
+    "Heading/H3": "S:823c737f224f18865971b2ddb597eec4812f9973,",
+    "Label/H4": "S:784df05e3aea71a366d5ad67f6ce958cb8d7f81f,",
+    "Body/Regular": "S:46b6c7bb931cc0612b1edd6a3bbbe624e7014bd4,",
+    "Body/Small": "S:a5ae6096e6d5c8b852c862523741f3d75f0638cf,",
+    "Price": "S:5f2bcf601f1a32f8a52523d1397c880324f1fda0,",
+    "CTA/Button": "S:3038da02b31bdd38d5f2b78694de53d29a782b8c,",
+    "Tagline": "S:9658e3b1a1c9bf57227525ca409987409779b202,"
+  },
+  "effectStyles": {
+    "Shadow/sm": "S:bdc8f0f38badc7ad165f885931d499606141b5d4,",
+    "Shadow/md": "S:ec9cb1fb2749daa81a3a16929f3d9548289beb95,",
+    "Shadow/lg": "S:19eff074298fc897e17b345c1d51d15ab96cbb31,"
+  },
+  "nextSteps": ["Phase 2: page skeleton + foundations docs", "Phase 3: components per .plans/phase-1-plan.md Chunk B", "Then screens Chunks C-E"]
+}
