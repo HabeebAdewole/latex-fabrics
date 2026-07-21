@@ -63,6 +63,17 @@ touch targets ≥44px. Plan: .plans/phase-2-plan.md
   customer auth) — will be reworked in Phase 2, designs take authority
 
 ## Completed Tasks This Phase
+- PHASE 2 Chunk C (shop flow) DONE on branch phase-2/chunk-c-shop-flow (stacked on chunk-b,
+  PR base = chunk-b branch until B merges): SCR-002 Catalog (URL-synced category pills + sort,
+  responsive 2/3/4-col grid, load-more pagination, empty state) · SCR-003 Product Detail
+  (gallery+thumbs, live ₦ qty calc 1–50, add-to-cart toast, single-item WhatsApp order deep
+  link, wishlist, share via navigator.share/clipboard, Description/Fabric/Care/Occasion
+  accordion, related products, out-of-stock → "Notify me on WhatsApp") · SCR-004 Search (400ms
+  debounce, case-insensitive partial match on name+category, empty state + suggestion chips).
+  New shared components: ProductGrid, EmptyState, Accordion. Verified live in browser: category
+  filter (Cord Lace→2), sort price-asc (₦6,800→7,200→8,500), load-more (8→12), qty calc
+  (2×₦8,500=₦17,000) + WA link carries qty, out-of-stock path, search debounce+partial+empty.
+  Build 94.5KB gz core.
 - PHASE 2 Chunk B (component library + Home) DONE on branch phase-2/chunk-b-components:
   Button (5 variants × 2 sizes + buttonVariants for links) · FabricBadge/StockBadge · Pill ·
   Input/Textarea · QuantitySelector (44px targets, aria) · Radio · Toast system (3s, undo

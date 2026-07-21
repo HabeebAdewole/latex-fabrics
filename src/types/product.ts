@@ -10,6 +10,9 @@ export interface Product {
   stockQuantity: number;
   images: string[];
   colors: string[];
+  /** Frontend-only V1 enrichment (Occasion Guide). Not in the Prisma model yet —
+   *  optional so the shape still matches the API response after the Phase 3 swap. */
+  occasions?: string[];
 }
 
 export type StockStatus = "in-stock" | "low-stock" | "out-of-stock";
