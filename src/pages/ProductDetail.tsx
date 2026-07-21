@@ -3,7 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { Heart, Share2 } from "lucide-react";
 import { getProductById, getRelatedProducts, getStockStatus } from "../lib/catalog";
 import { formatNaira } from "../lib/format";
-import { buildOrderMessage, waLink } from "../lib/whatsapp";
+import { waLink } from "../lib/whatsapp";
+import CheckoutModal from "../components/checkout/CheckoutModal";
 import { MAX_YARDS } from "../config";
 import Button, { buttonVariants } from "../components/ui/Button";
 import WhatsAppIcon from "../components/ui/WhatsAppIcon";
@@ -23,6 +24,7 @@ export default function ProductDetail() {
 
   const [activeImage, setActiveImage] = useState(0);
   const [qty, setQty] = useState(1);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
   const addItem = useCartStore((s) => s.addItem);
   const wishlisted = useWishlistStore((s) => (product ? s.ids.includes(product.id) : false));
   const toggleWishlist = useWishlistStore((s) => s.toggle);
@@ -34,14 +36,6 @@ export default function ProductDetail() {
   const outOfStock = stock === "out-of-stock";
   const lineTotal = product.pricePerYard * qty;
   const related = getRelatedProducts(product);
-
-  const orderHref = waLink(
-    buildOrderMessage({
-      lines: [{ name: product.name, quantity: qty, pricePerYard: product.pricePerYard }],
-      customerName: "",
-      deliveryPreference: "Pickup",
-    }),
-  );
 
   const shareProduct = async () => {
     const url = window.location.href;
@@ -183,15 +177,14 @@ export default function ProductDetail() {
                 >
                   Add to cart
                 </Button>
-                <a
-                  href={orderHref}
-                  target="_blank"
-                  rel="noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setCheckoutOpen(true)}
                   className={buttonVariants("whatsapp", "md", "w-full")}
                 >
                   <WhatsAppIcon size={20} />
                   Order via WhatsApp
-                </a>
+                </button>
               </>
             )}
           </div>
@@ -259,6 +252,14 @@ export default function ProductDetail() {
           </div>
         </section>
       )}
+
+      <CheckoutModal
+        open={checkoutOpen}
+        onClose={() => setCheckoutOpen(false)}
+        lines={[
+          { name: product.name, quantity: qty, pricePerYard: product.pricePerYard },
+        ]}
+      />
     </div>
   );
 }

@@ -63,6 +63,20 @@ touch targets ≥44px. Plan: .plans/phase-2-plan.md
   customer auth) — will be reworked in Phase 2, designs take authority
 
 ## Completed Tasks This Phase
+- PHASE 2 Chunk D (cart + checkout) DONE on branch phase-2/chunk-d-cart-checkout (stacked on
+  chunk-c; PR base = chunk-c until C merges): SCR-005 Cart (item rows w/ qty controls + undo
+  remove toast, real-time subtotal, sticky summary desktop, empty state) · SCR-006 WhatsApp
+  Checkout modal (bottom sheet mobile / centered desktop, name+delivery required validation,
+  notes 200-char counter, message EXACTLY per brand §9.3, wa.me handoff, "Order Sent!"
+  confirmation, focus-trap + Esc + overlay close) · SCR-007 Wishlist (saved grid, Order All
+  via WhatsApp excluding out-of-stock, empty state). Retrofitted SCR-003 Product Detail's
+  WhatsApp button to open the modal too (spec-correct name/delivery capture). New: CheckoutModal,
+  useCartLines hook. Verified live: cart totals (5 items ₦49,500), validation blocks invalid
+  send, message format exact, confirmation shows, cart PRESERVED after send (unconfirmed intent),
+  wishlist Order-All skips OOS, both empty states. Build 94.6KB gz core.
+  - Bug fixed mid-chunk: auto-clearing cart on send unmounted the modal before the confirmation
+    could render → decided NOT to clear cart (WhatsApp is an unconfirmed intent; spec never says
+    to clear; safer UX). Confirmation now renders and cart persists.
 - PHASE 2 Chunk C (shop flow) DONE on branch phase-2/chunk-c-shop-flow (stacked on chunk-b,
   PR base = chunk-b branch until B merges): SCR-002 Catalog (URL-synced category pills + sort,
   responsive 2/3/4-col grid, load-more pagination, empty state) · SCR-003 Product Detail
