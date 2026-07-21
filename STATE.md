@@ -63,6 +63,14 @@ touch targets ≥44px. Plan: .plans/phase-2-plan.md
   customer auth) — will be reworked in Phase 2, designs take authority
 
 ## Completed Tasks This Phase
+- PHASE 2 Chunk B (component library + Home) DONE on branch phase-2/chunk-b-components:
+  Button (5 variants × 2 sizes + buttonVariants for links) · FabricBadge/StockBadge · Pill ·
+  Input/Textarea · QuantitySelector (44px targets, aria) · Radio · Toast system (3s, undo
+  action, aria-live) · WhatsAppIcon (official glyph) · ProductCard (+skeleton, wishlist heart,
+  add-to-cart toast) · CategoryTile · CartItemRow · LocationCard · Full SCR-001 Home (7
+  sections, mobile scroll → desktop grid). Verified in browser: cart/wishlist persist to
+  localStorage, badges update live, toasts stack, card→detail routing works, all brand tokens
+  assert correct (wine+pattern hero, gold prices, Playfair H1). Build: 93.4KB gz core.
 - PHASE 2 Chunk A (foundation) DONE on branch phase-2/chunk-a-foundation:
   deps swapped (zustand + @fontsource in; react-query + axios out) · Royal Velvet tailwind
   tokens · Royal Lace CSS pattern utility (inline SVG) · old src/ torn down · config.ts
