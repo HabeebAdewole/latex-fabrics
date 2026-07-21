@@ -1,5 +1,0 @@
-export default function CartSummary() {
-  return (
-    <div>CartSummary Component</div>
-  );
-}

@@ -1,33 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* Reset and global styles */
   html,
   body,
   #root {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
   }
 
   body {
-    @apply bg-brand-beige text-brand-black font-sans antialiased;
+    @apply bg-brand-ivory font-sans text-brand-charcoal antialiased;
   }
 
-  /* Headings */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2 {
     @apply font-serif;
   }
 }
 
-@layer components {
-  /* Links */
-  a {
-    @apply text-brand-green hover:text-brand-green-light transition-colors;
+@layer utilities {
+  /* Royal Lace brand pattern — gold lace-rosette + adire diamond lattice on Deep Wine.
+     80px tile per .plans/figma-build-state.json spec; inline SVG so it costs 0 requests. */
+  .bg-royal-lace {
+    background-color: #451822;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none' stroke='%23C6A032' stroke-opacity='0.13' stroke-width='1'%3E%3Cpath d='M40 4 L76 40 L40 76 L4 40 Z'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Ccircle cx='40' cy='22.4' r='4.8'/%3E%3Ccircle cx='57.6' cy='40' r='4.8'/%3E%3Ccircle cx='40' cy='57.6' r='4.8'/%3E%3Ccircle cx='22.4' cy='40' r='4.8'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+  }
+
+  /* hide scrollbars on horizontal scroll rows (filter pills, card rows) */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
